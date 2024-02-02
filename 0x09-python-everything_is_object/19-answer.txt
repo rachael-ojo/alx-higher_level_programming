@@ -3,5 +3,4 @@
 def copy_list(l):
     new_list = []
     for value in copy_list:
-        new_list += [2 * value]
     return new_list
