@@ -7,5 +7,4 @@ def positive_or_negative(num):
     elif num < 0:
         print("negative")
     else:
-        print("zero")
-~                     
+        print("zero")  
