@@ -11,8 +11,8 @@ def mul(a, b):
 def div(a, b):
     result = div(a, b)
 
-    if __name__ == "__main__":
-        from calculator_1 import calculation
+if __name__ == "__main__":
+    from calculator_1 import calculation
 
         a = 10
         b = 5
