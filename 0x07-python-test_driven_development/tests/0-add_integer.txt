@@ -1,0 +1,45 @@
+cat tests/0-add_integer.txt
+/tmp$ cat /tmp/0-add_integer.txt
+Trying:
+    add_integer(1, 2)
+Expecting:
+    3
+ok
+Trying:
+    add_integer(100, -2)
+Expecting:
+    98
+ok
+Trying:
+    add_integer(2)
+Expecting:
+    100
+ok
+Trying:
+    add_integer(100.3, -2)
+Expecting:
+    98
+ok
+Trying:
+    add_integer(100.5, -2.5)
+Expecting:
+    98
+ok
+Trying:
+    add_integer(4, 5.5)
+Expecting:
+    9
+ok
+Trying:
+    add_integer(100.2, -2.3)
+Expecting:
+    98
+ok
+1 items had no tests:
+    __main__
+2 items passed all tests:
+   6 tests in __main__.add_integer
+   7 tests in __main__.add_integer.__test__
+13 tests in 3 items.
+13 passed and 0 failed.
+Test passed.
