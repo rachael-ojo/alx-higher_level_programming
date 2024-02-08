@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 import sys
 
-def print_arguments():
+ """Print the number of and list of arguments."""
+ def print_arguments():
     num_args = len(sys.argv) - 1
     if num_args == 0:
         print("Number of argument(s): .")
