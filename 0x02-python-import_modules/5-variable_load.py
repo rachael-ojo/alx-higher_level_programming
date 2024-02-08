@@ -11,3 +11,6 @@ def print_defined_names():
             names.add(instruction.argrepr)
     for name in sorted(names):
         print(name)
+
+if __name__ == "__main__":
+    print_defined_names()
