@@ -20,10 +20,13 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def __str__(self):
+        """
+        Return a string representation of the square.
+        """
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
     def to_dictionary(self):
-        """
-        Return the dictionary representation of a rectangle.
-        """
         return {
             'id': self.id,
             'width': self.width,
@@ -31,9 +34,3 @@ class Square(Rectangle):
             'x': self.x,
             'y': self.y
         }
-
-    def __str__(self):
-        """
-        Return a string representation of the square.
-        """
-        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"

@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-class Base:
     """The class Base for its instances
-    Attributes:
+class Base:
     __nb_objects (int): Is the number of objects created from this class
     """
+    Attributes:
 
     __nb_objects = 0
 
