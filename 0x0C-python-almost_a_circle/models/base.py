@@ -1,15 +1,19 @@
 #!/usr/bin/python3
-    """The class Base for its instances
-class Base:
-    __nb_objects (int): Is the number of objects created from this class
-    """
-    Attributes:
+"""This module contain Base class and some imported modules"""
+import json
+import os
+import csv
+import turtle
 
+class Base:
+    """The class Base for its instances
+    Attributes:
+        __nb_objects (int): Is the number of objects created from this class
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
         """the initializing method"""
-
         if id is not None:
             self.id = id
         else:
