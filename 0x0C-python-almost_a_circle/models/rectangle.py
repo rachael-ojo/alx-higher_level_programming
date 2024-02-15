@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-from .base import Base
+"""Define a Rectangle model"""
+from models.base import Base
 
 class Rectangle(Base):
+    """Represent a Rectangle"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
+        """Initialize a new Rectangle"""
         self.width = width
         self.height = height
         self.x = x
@@ -11,6 +15,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """This value determines the width of the Rectangle"""
         return self.__width
 
     @width.setter
@@ -23,6 +28,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """This value determines the height of the Rectangle"""
         return self.__height
 
     @height.setter
@@ -35,6 +41,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """This value determine the x coordinate of the Rectangle"""
         return self.__x
 
     @x.setter
@@ -47,6 +54,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """This value determine the y coordinate of the Rectangle"""
         return self.__y
 
     @y.setter
@@ -58,18 +66,22 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """This value determine the area of the Rectangle"""
         return self.width * self.height
 
     def display(self):
+        """Print the Rectangle using the '#' character"""
         for _ in range(self.y):
             print()
         for _ in range(self.height):
             print(" " * self.x + "#" * self.width)
 
     def __str__(self):
+        """Return the print() and str() representation of the Rectangle"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
+        """Update the Rectangle"""
         if args:
             if len(args) > 0:
                 self.id = args[0]
