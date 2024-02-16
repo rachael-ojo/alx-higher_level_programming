@@ -69,9 +69,41 @@ class Rectangle(Base):
         self.__y = value
 
     def display(self):
-        """Display the rectangle's information."""
-        print(f"Rectangle: width={self.width}, height={self.height}, x={self.x}, y={self.y}")
+        """Display the rectangle using '#'."""
+        for _ in range(self.height):
+            print("#" * self.width)
+
+    def __str__(self):
+        """Return string representation of Rectangle."""
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     def area(self):
         """Calculate the area of the rectangle."""
         return self.width * self.height
+
+    def update(self, *args):
+        """Assign arguments to attributes."""
+        if len(args) >= 1:
+            self.id = args[0]
+        if len(args) >= 2:
+            self.width = args[1]
+        if len(args) >= 3:
+            self.height = args[2]
+        if len(args) >= 4:
+            self.x = args[3]
+        if len(args) >= 5:
+            self.y = args[4]
+
+    def update(self, *args, **kwargs):
+        """Assign arguments to attributes."""
+        if args:
+            attrs = ['id', 'width', 'height', 'x', 'y']
+            for attr, value in zip(attrs, args):
+                setattr(self, attr, value)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Return dictionary representation of Rectangle."""
+        return {'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y}
