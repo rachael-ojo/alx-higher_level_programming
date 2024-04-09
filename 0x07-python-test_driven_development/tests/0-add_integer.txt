@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+def test_add_integer():
+    """
+    Test cases for the add_integer function.
+    """
+    # Test adding two positive integers
+    assert add_integer(1, 2) == 3
+
+    # Test adding a positive integer and a negative integer
+    assert add_integer(100, -2) == 98
+
+    # Test adding a positive integer and default value
+    assert add_integer(2) == 100
+
+    # Test adding a float and a negative integer
+    assert add_integer(100.3, -2) == 98
+
+    # Test adding a float and a negative float
+    assert add_integer(100.5, -2.5) == 98
+
+    # Test adding two numbers with one as float
+    assert add_integer(4, 5.5) == 9
+
+    # Test adding two floats
+    assert add_integer(100.2, -2.3) == 98
+
+    print("All test cases passed!")
+
+if __name__ == "__main__":
+    test_add_integer()
