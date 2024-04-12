@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+import unittest
+
+class TestMyListFile(unittest.TestCase):
+    def test_file_exists(self):
+        """
+        Test if the file '1-my_list.txt' exists.
+        """
+        file_path = "1-my_list.txt"
+        try:
+            with open(file_path, "r") as file:
+                file_contents = file.read()
+        except FileNotFoundError:
+            self.fail(f"The file '{file_path}' does not exist.")
+        except Exception as e:
+            self.fail(f"An unexpected error occurred: {e}")
+
+    def test_file_content(self):
+        """
+        Test if the content of the file '1-my_list.txt' matches the expected content.
+        """
+        file_path = "1-my_list.txt"
+        expected_content = "This is the content of my list file."
+
+        try:
+            with open(file_path, "r") as file:
+                file_contents = file.read()
+            self.assertEqual(file_contents.strip(), expected_content)
+        except FileNotFoundError:
+            self.fail(f"The file '{file_path}' does not exist.")
+        except Exception as e:
+            self.fail(f"An unexpected error occurred: {e}")
+
+if __name__ == "__main__":
+    unittest.main()
