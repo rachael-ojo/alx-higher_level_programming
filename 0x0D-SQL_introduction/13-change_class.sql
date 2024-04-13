@@ -1,0 +1,3 @@
+-- Remove_records with Score <= 5 in 'second_table" for 'hbtn_0c_0'
+
+DELETE FROM second_table WHERE score <=5;
