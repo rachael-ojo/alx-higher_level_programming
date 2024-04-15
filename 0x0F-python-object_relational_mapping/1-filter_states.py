@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """This script connects to a MySQL database and retrieves the first 5 states that starts with N from the 'states' table."""
 
 import sys
