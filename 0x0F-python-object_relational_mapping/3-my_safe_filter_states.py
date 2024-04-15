@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Function that is typically used to access, modify, or delete data from a database."""
 
 import MySQLdb
