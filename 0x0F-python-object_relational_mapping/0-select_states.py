@@ -3,6 +3,7 @@ import sys
 import MySQLdb
 
 def list_states(username, password, database):
+    """Function retrieves and prints all states from the states table in a specified MySQL database"""
     try:
         db = MySQLdb.connect(host='localhost', port=3306, user=username, passwd=password, db=database);
         cursor = db.cursor()
