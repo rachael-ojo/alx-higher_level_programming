@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Function retrieves and prints the first 5 states from the states table in a specified MySQL database"""
 
 import sys
