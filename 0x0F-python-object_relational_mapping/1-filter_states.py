@@ -3,11 +3,12 @@ import sys
 import MySQLdb
 
 def list_states_starting_with_N(username, password, database):
+    """Function retrieves and prints the first 5 states that starts with N from the states table in a specified MySQL database"""
     try:
         db = MySQLdb.connect(host='localhost', port=3306, user=username, passwd=password, db=database)
 
         cursor = db.cursor()
-        sql = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC LIMIT 2"
+        sql = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC LIMIT 5"
 
         cursor.execute(sql)
         states = cursor.fetchall()
