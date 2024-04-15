@@ -10,14 +10,13 @@ def list_states_starting_with_N(username, password, database):
         db = MySQLdb.connect(host='localhost', port=3306, user=username, passwd=password, db=database)
 
         cursor = db.cursor()
-        sql = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC LIMIT 5"
+        sql = "SELECT * FROM states WHERE BiNARY name  LIKE 'N%' ORDER BY id ASC LIMIT 5"
 
         cursor.execute(sql)
         states = cursor.fetchall()
 
         for state in states:
             print(f"({state[0]}, '{state[1]}')")
-
         cursor.close()
         db.close()
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""This script connects to a MySQL database and retrieves the first 5 states from the 'states' table."""
+"""This script connects to a MySQL database and retrieves the lists of all states from the hbtn_0e_0_usa database."""
 
 import sys
 import MySQLdb
