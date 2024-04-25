@@ -1,15 +1,4 @@
 #!/bin/bash
+# This script sends a GET request to a URL and displays the body of the response
 
-# Check if URL argument is provided
-if [ $# -eq 0 ]; then
-    echo "Usage: $0 <URL>"
-    exit 1
-fi
-
-URL=$1
-
-# Send a DELETE request to the URL and capture the response
-response=$(curl -s -X DELETE "$URL")
-
-# Display the response body
-echo "$response"
+curl -s -H "X-School-User-Id: 98" "$1"
