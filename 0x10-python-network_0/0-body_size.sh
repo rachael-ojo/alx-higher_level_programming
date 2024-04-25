@@ -8,8 +8,14 @@ fi
 
 URL=$1
 
-# Send a curl request to the URL and capture the response
+# Send a curl request to the URL and capture the size of the response body
 response=$(curl -s -o /dev/null -w "%{size_download}" "$URL")
+
+# Check if curl command was successful
+if [ $? -ne 0 ]; then
+    echo "Error: Curl request to $URL failed"
+    exit 1
+fi
 
 # Display the size of the response body in bytes
 echo "Size of the response body: $response bytes"
